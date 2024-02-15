@@ -6,26 +6,24 @@ export const useStoryContext = () => useContext(StoryContext);
 
 export const StoryProvider = ({ children }) => {
   const [characterDetails, setCharacterDetails] = useState({
-    name: '',
-    age: '',
-    color: '',
-    toy: '',
-    animals: '',
-    activity: '',
-    siblings: '',
-    personality: '',
+    name: 'Lyra',
+    age: '4',
+    favoriteColor: 'purple',
+    favoriteToy: 'dolls',
+    favoriteAnimals: 'tiger',
+    favoriteActivity: 'puzzles',
+    siblings: 'Isaac age 2',
+    traits: 'kind',
   });
   const [plotDetails, setPlotDetails] = useState({
     rhyme: false,
-    language: {
-      simple: true,
-      educational: false,
-      newVocab: false,
-      newConcepts: false,
-    },
+    simpleLanguage: true,
+    educationalElements: false,
+    newVocabulary: true,
+    newConcepts: false,
     interactiveQuestions: false,
-    isMoral: '',
-    additionalCharacters: '',
+    lessonOrMoral: 'Bravey and kindness',
+    characterNames: 'Henry, Papa, and Mama',
   });
 
   return (
