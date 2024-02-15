@@ -3,31 +3,38 @@
 import {
   Card,
   CardBody,
-  CardFooter,
-  Button,
   Input,
   Typography,
   Textarea,
 } from '@material-tailwind/react';
+import { useContext } from 'react';
+import { StoryContext } from '../contexts/StoryContext';
 
 export default function CharacterDetails() {
+  const { setCharacterDetails } = useContext(StoryContext);
+
   return (
     <Card className="w-1/4">
       <CardBody className="flex flex-col gap-4">
         <Typography variant="h5" color="blue-gray" className="mb-2">
           Main character details
         </Typography>
-        <Input type="text" label="Name" />
-        <Input type="text" label="Age" />
-        <Input type="text" label="Favorite color" />
-        <Input type="text" label="Favorite toy" />
-        <Input type="text" label="Favorite animals" />
-        <Input type="text" label="Favorite activity" />
-        <Textarea label="Siblings" />
-        <Textarea
-          label="Personality"
-          placeholder="What are some qualities or traits you'd like the story to reinforce or teach? (Such as bravery, kindness, curiosity, etc.)"
-        />
+        <form onSubmit={}>
+          <Input type="text" label="Name" />
+          <Input type="text" label="Age" />
+          <Input type="text" label="Favorite color" />
+          <Input type="text" label="Favorite toy" />
+          <Input type="text" label="Favorite animals" />
+          <Input type="text" label="Favorite activity" />
+          <Textarea label="Siblings" />
+          <div>
+            <Typography variant="p" color="blue-gray" className="mb-2">
+              What are some qualities or traits you&apos;d like the story to
+              reinforce or teach? (Such as bravery, kindness, curiosity, etc.)
+            </Typography>
+            <Textarea label="Traits" />
+          </div>
+        </form>
       </CardBody>
       {/* <CardFooter className="pt-0">
         <Button variant="gradient" fullWidth>

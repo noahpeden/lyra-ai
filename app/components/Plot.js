@@ -2,10 +2,8 @@
 import {
   Card,
   CardBody,
-  CardFooter,
   Typography,
   Checkbox,
-  Button,
   Textarea,
   List,
   ListItem,
@@ -127,11 +125,7 @@ export default function Plot() {
             Is there a specific lesson or moral you&apos;d like the story to
             convey?
           </Typography>
-          <div className="flex w-1/2">
-            <Checkbox label="Yes" />
-            <Input label="Lesson or moral" />
-          </div>
-          <Checkbox label="No" />
+          <Input label="Lesson or moral" />
         </div>
         <div>
           <Typography variant="p" color="blue-gray" className="mb-2">
