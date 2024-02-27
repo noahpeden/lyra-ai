@@ -85,7 +85,7 @@ export default function Plot() {
         </div>
         <div>
           <Typography variant="paragraph" color="blue-gray" className="mb-2">
-            Is there a specific lesson or moral you'd like the story to convey?
+            Is there a specific lesson or moral you would like the story to convey?
           </Typography>
           <Input
             name="lessonOrMoral"
